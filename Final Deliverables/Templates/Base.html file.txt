@@ -1,0 +1,155 @@
+ <html>
+    <head>
+        <title>Nutrition Tracker</title>
+        <style>
+            a{
+                text-decoration:none;
+            }
+
+            body{
+                /*background-color: #a0d2eb;*/
+                background-image: url('static/hello.jpg' );
+                background-size: 100% 100%;
+
+
+            }
+            .homepage{
+                display: flex;
+                flex-direction: column;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            .ansView{
+                flex-direction: column;
+                padding: 0 200px 0 200px;
+                margin-left: 400px;
+
+            }
+            .ans-right{
+                flex-direction: column;
+                padding: 0 200px 0 200px;
+                margin-left: 400px;
+
+            }
+
+         
+            .navbar{
+                height:150px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin:10px 10px 100px 10px;
+                border-bottom: 1px solid black;
+                background:#3e3e3e;
+                color:white;
+            }
+
+            .nav-left{
+                padding-left:20px;
+                color:white;
+                
+            }
+
+            .nav-right{
+                display: flex;
+                width: 300px;
+                justify-content: space-evenly;
+                text-decoration: none;
+
+            }
+
+            .nav-right a{
+                color: white;
+            }
+
+            .homeview{
+                font-size: x-large;
+                margin: 0 350px 0 350px;
+                display: flex;
+                flex-direction: column;
+                justify-items: center;
+            }
+
+            
+
+            .uploadview{
+                flex-direction: column;
+                padding: 0 200px 0 200px;
+                margin-left: 400px;
+
+                justify-content: center;
+                justify-items: center;
+            }
+
+            .formView{
+                display: flex;
+
+                flex-direction: column;
+                justify-content: center;
+                justify-items: center;
+            }
+
+
+            .homeview p{
+                text-align: center;
+            }
+
+            .submit{
+                border:none;
+                color: #a0d2eb;
+                background:#3e3e3e;
+                border-radius:50px;
+                height:40px;
+                color:white;
+                width:130px;
+                box-shadow: 2px 0px 0px grey;
+                margin-top: 20px;
+            }
+            .submit:hover{
+                background-color: #a0d2eb ;
+                color: #3e3e3e;
+            }
+
+
+        #choose_file{
+                width:300px;
+                background:white;
+                border:none;
+                outline:none;
+                box-shadow: 2px 5px 2px black;
+                border-radius:50px;
+            }
+            ::-webkit-file-upload-button{
+                border:none;
+                color: #a0d2eb;
+                background-color:#3e3e3e;
+                border-radius:50px;
+                height:40px;
+                color:white;
+                width:100px;
+                box-shadow: 2px 0px 0px grey;
+            }
+            ::-webkit-file-upload-button:hover{
+                background-color: #a0d2eb ;
+                color: #3e3e3e;
+        }
+        </style>
+    </head>
+
+    <body>
+        <div class="homepage">
+        <div class="navbar">
+            <div class="nav-left">
+                <h1>AI-powered nutrition analyzer for fitness enthusiasts</h1>
+                <h4>TEAM ID - PNT2022TMID15853</h4>
+            </div>
+            <div class="nav-right">
+                <a href={{ url_for('home') }}><h3>Home</h3></a>
+                <a href={{ url_for('image1') }}><h3>Classify</h3></a>
+            </div>
+        </div>
+        {% block content %}
+        {% endblock %}
+        </div>
+    </body>
+
+</html>
